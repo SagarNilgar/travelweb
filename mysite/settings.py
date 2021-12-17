@@ -26,7 +26,7 @@ SECRET_KEY = '=7c)89oxpftpkxd@c6uh8ytkbp@b4a+c5jaq%m4@m@5k=$$ba1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','travelsagar.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1','travelsagar.herokuapp.com']
 
 
 # Application definition
