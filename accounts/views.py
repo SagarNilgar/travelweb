@@ -7,10 +7,6 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 
-import pyttsx3
-import datetime
-import sys
-import pyaudio
 
 # Create your views here.
 
@@ -112,13 +108,6 @@ def logout(request):
     return redirect('/')
 
 
-def speak(request) :
-    engine = pyttsx3.init()
-    engine.say('Good morning.')
-  
-    engine.say('Nice to meet you')
-    engine.runAndWait()
-    return redirect('/')
 
 
   
