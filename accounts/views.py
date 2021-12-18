@@ -69,6 +69,10 @@ def logout(request):
     auth.logout(request)
     return redirect('/')
 
+def search(request):
+    
+    return render(request,'search.html')
+    
 
 
 
