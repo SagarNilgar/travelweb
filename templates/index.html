@@ -87,11 +87,16 @@
 			</div>
 			<div class="menu_content">
 				<ul>
-					<li><a href="inex.html">Home</a></li>
-					<li><a href="about.html">About us</a></li>
-					<li><a href="#">Services</a></li>
-					<li><a href="news.html">News</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						{% if user.is_authenticated%}
+						<li>Hello, {{user.first_name}}</li> 
+						<li><a href="accounts/logout">Logout</a></li>
+						{% else %}
+
+						<li><a href="accounts/register">Register</a></li>
+						<li><a href="accounts/login">Login</a></li>
 				</ul>
 			</div>
 			<div class="menu_social">
@@ -193,17 +198,17 @@
 						<div class="home_search_container">
 							<div class="home_search_title">Search for your trip</div>
 							<div class="home_search_content">
-								<form method=POST action="{% url'search' %}" class="home_search_form" id="home_search_form">
+								<form  class="home_search_form" id="home_search_form">
 									{% csrf_token %}
 									<div
 										class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
 										<input type="text" class="search_input search_input_2" placeholder="Departure"
-											required="required">
+											required="required" >
 										<input type="text" class="search_input search_input_3" placeholder="Arrival"
-											required="required">
+											required="required" >
 										<input type="text" class="search_input search_input_4" placeholder="Budget"
-											required="required">
-										<button class="home_search_button">search</button>
+											required="required" >
+										<button class="home_search_button"><a href="accounts/search1">Search</a></button>
 									</div>
 								</form>
 							</div>
